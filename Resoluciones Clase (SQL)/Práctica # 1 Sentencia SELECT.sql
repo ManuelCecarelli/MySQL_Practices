@@ -40,7 +40,7 @@ LINES TERMINATED BY '\n';
 -- nacimiento, teléfono, y su dirección. Las cabeceras de las columnas serán:
 -- Apellido y Nombre (concatenados)  Fecha Nac. Teléfono Dirección
 SELECT concat(apellido, ", ", nombre) as "Apellido y Nombre (concatenados)", 
-date_format(fecha_nacimiento, "%d de %m de %y") "Fecha Nac.", 
+date_format(fecha_nacimiento, "%d de %M de %Y") "Fecha Nac.", 
 Telefono as "Teléfono", 
 direccion as "Dirección" 
 FROM personas WHERE dni = "28675888";
