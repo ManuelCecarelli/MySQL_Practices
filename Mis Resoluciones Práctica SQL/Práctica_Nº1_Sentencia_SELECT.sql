@@ -143,3 +143,18 @@ WHERE desc_titulo LIKE "%Tecnico%";
 sea 6; o hayan solicitado aspirantes de sexo femenino
 */
 
+SELECT *
+FROM solicitudes_empresas
+WHERE
+	(fecha_solicitud > DATE("2013-09-21") AND cod_cargo = 6)
+    OR
+    (sexo = "Femenino");
+
+/*
+14) Seleccionar los contratos con un salario pactado mayor que 2000 y que no hayan sido
+terminado.
+*/
+
+SELECT *
+FROM contratos
+WHERE sueldo > 2000 AND fecha_caducidad IS NULL;
