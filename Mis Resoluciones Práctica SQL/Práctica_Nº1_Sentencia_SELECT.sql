@@ -116,3 +116,30 @@ WHERE
     AND
     NOT (fecha_hasta > DATE("2013-05-31") AND fecha_hasta < DATE("2014-01-01"))
 ORDER BY dni;
+
+/*
+11) Mostrar los contratos cuyo salario sea mayor que 2000 y trabajen en las empresas 30-
+10504876-5 o 30-21098732-4.Rotule el encabezado:
+Nro Contrato | DNI | Salario | CUIL
+*/
+
+SELECT
+	nro_contrato "Nro Contrato",
+	dni "DNI",
+    sueldo "Salario",
+    cuit "CUIT"
+FROM contratos
+WHERE sueldo > 2000 AND (cuit = "30-10504876-5" OR cuit = "30-21098732-4");
+
+/*
+12) Mostrar los títulos técnicos.
+*/
+SELECT *
+FROM titulos
+WHERE desc_titulo LIKE "%Tecnico%";
+
+/*
+13) Seleccionar las solicitudes cuya fecha sea mayor que ‘21/09/2013’ y el código de cargo
+sea 6; o hayan solicitado aspirantes de sexo femenino
+*/
+
